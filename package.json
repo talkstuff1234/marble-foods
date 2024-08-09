@@ -49,7 +49,8 @@
         ]
     },
     "devDependencies": {
-        "tailwindcss": "^3.4.9",
-        "prettier-plugin-tailwindcss": "^0.5.4"
+        "@types/aos": "^3.0.7",
+        "prettier-plugin-tailwindcss": "^0.5.4",
+        "tailwindcss": "^3.4.9"
     }
 }

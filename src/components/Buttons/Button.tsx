@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { LoadingAnimation } from "../../assets/RenderedAssets"
-import React, { SVGProps } from "react"
+import React, { ReactNode, SVGProps } from "react"
 
 type Props = SVGProps<SVGSVGElement>
 type ButtonProp = {
@@ -13,28 +13,30 @@ type ButtonProp = {
     isLoading?: boolean
     icon?: string
     url?: string
-    icon2?: React.FC<Props>
+    icon2?: ReactNode
 }
 
 const Button = ({
     value,
     textColor = "text-white",
-    btnColor = "bg-secondary",
+    btnColor = "bg-primaryLight",
     type,
     click,
     disabled = false,
     isLoading,
     icon,
     url = "/",
+    icon2,
 }: ButtonProp) => {
     return (
         <>
             {type == null ? (
                 <Link
                     to={`${url}`}
-                    className={`rounded-md ${btnColor} ${textColor} text-20 px-12 py-4 transition-all duration-500 ease-in-out hover:${btnColor}/40`}
+                    className={`rounded-[7px] ${btnColor} ${textColor} text-20 border border-white/20 px-5 py-3 transition-all duration-500 ease-in-out hover:${btnColor}/40 flex items-center w-fit`}
                 >
                     {value}
+                    {icon2 !== null ? (isLoading == true ? null : icon2) : null}
                 </Link>
             ) : (
                 <button
@@ -48,6 +50,7 @@ const Button = ({
                     {icon === null ? null : (
                         <img src={icon} alt="icon" className="mr-3" />
                     )}
+                    {icon2 !== null ? (isLoading == true ? null : icon2) : null}
                     {isLoading ? <LoadingAnimation /> : null}
                     {value}
                 </button>

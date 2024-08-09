@@ -8,7 +8,18 @@ export type EachNavItemsProps = {
     delay: number
     dropdownItem?: {
         value: string
-        description: string,
+        description: string
         link: string
     }[]
+}
+
+export type WhatSetsUsApartProp = {
+    items: WhatSetsUsApartItemsProp[]
+}
+
+export type WhatSetsUsApartItemsProp = {
+    images: string[]
+    title: string
+    coated: string
+    description?: string
 }

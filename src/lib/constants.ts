@@ -1,4 +1,10 @@
-import { NavItemsProps } from "./types"
+import { NavItemsProps, WhatSetsUsApartProp } from "./types"
+import APARTA1 from "../assets/apartA1.svg"
+import APARTA2 from "../assets/apartA2.svg"
+import APARTB1 from "../assets/apartB1.svg"
+import APARTB2 from "../assets/apartB2.svg"
+import APARTB3 from "../assets/apartB3.svg"
+import APARTB4 from "../assets/apartB4.svg"
 
 export const NavItems: NavItemsProps = {
     items: [
@@ -75,6 +81,25 @@ export const NavItems: NavItemsProps = {
                     link: "/services/sand-dredging",
                 },
             ],
+        },
+    ],
+}
+
+export const WhatSetsUsApartData: WhatSetsUsApartProp = {
+    items: [
+        {
+            images: [APARTA1, APARTA2],
+            coated: "Maximizing Yields and Reducing Post-Harvest Losses with Free Warehousing Solutions.",
+            title: "Empowering Smallholder Farmers",
+            description:
+                "Our agro-processing hub and warehousing facilities enable smallholder farmers to eliminate yield losses from poor post-harvest practices. By providing storage at zero cost, we help farmers reap maximum yields from their harvests and preserve their produce for extended periods.",
+        },
+        {
+            images: [APARTB1, APARTB2, APARTB3, APARTB4],
+            coated: "Expert Consulting and Contracting for Local and International Agro-Enterprises.",
+            title: "Comprehensive Consulting Services",
+            description:
+                "We provide specialized consulting and general contracting services to both local and international companies. Our expertise in the agro-commodity sector helps businesses optimize their operations, improve supply chain management, and navigate the complexities of agricultural trade.",
         },
     ],
 }
