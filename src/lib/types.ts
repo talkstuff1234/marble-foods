@@ -33,3 +33,10 @@ export type HomeProductItemsProp = {
     title: string
     url: string
 }
+
+export type NavItemProp = {
+    item: EachNavItemsProps
+    isOpenNavbar: boolean
+    closeNavbar: () => void
+    routeLink: (url: string, callOutro: boolean) => void
+}

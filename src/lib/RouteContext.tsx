@@ -14,7 +14,7 @@ export const RouteProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
     const location = useLocation()
     const [currentRoute, setCurrentRoute] = useState(location.pathname)
-    const [routeJustChanged, setRouteJustChanged] = useState(false)
+    const [routeJustChanged, setRouteJustChanged] = useState(true) // Start as true to trigger on first load
 
     useEffect(() => {
         if (currentRoute !== location.pathname) {
@@ -26,8 +26,15 @@ export const RouteProvider: React.FC<{ children: React.ReactNode }> = ({
             }, 4500)
 
             return () => clearTimeout(timer)
+        } else if (routeJustChanged) {
+            // Handles the initial load case
+            const timer = setTimeout(() => {
+                setRouteJustChanged(false)
+            }, 4500)
+
+            return () => clearTimeout(timer)
         }
-    }, [location.pathname])
+    }, [location.pathname, currentRoute, routeJustChanged])
 
     return (
         <RouteContext.Provider value={{ currentRoute, routeJustChanged }}>

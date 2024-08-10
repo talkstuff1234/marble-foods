@@ -17,6 +17,8 @@ const MainContent: React.FC = () => {
 
     return (
         <>
+            <ScrollToTop />
+            <Navbar />
             {isOutro && <PageOutroLoader />}
             {routeJustChanged ? (
                 <>
@@ -25,14 +27,18 @@ const MainContent: React.FC = () => {
                 </>
             ) : (
                 <>
-                    <ScrollToTop />
-                    <Navbar />
                     <Routes>
                         <Route path="/" element={<Homepage />} />
                     </Routes>
                     <Footer />
                 </>
             )}
+            {/* <ScrollToTop />
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Homepage />} />
+            </Routes>
+            <Footer /> */}
         </>
     )
 }
