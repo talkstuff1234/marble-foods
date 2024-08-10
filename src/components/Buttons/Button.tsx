@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { LoadingAnimation } from "../../assets/RenderedAssets"
 import React, { ReactNode, SVGProps } from "react"
+import { useOutro } from "../../lib/OutroContext"
 
 type Props = SVGProps<SVGSVGElement>
 type ButtonProp = {
@@ -11,6 +12,7 @@ type ButtonProp = {
     click?: () => void
     disabled?: boolean
     isLoading?: boolean
+    callOutro?: boolean
     icon?: string
     url?: string
     icon2?: ReactNode
@@ -27,17 +29,27 @@ const Button = ({
     icon,
     url = "/",
     icon2,
+    callOutro = true,
 }: ButtonProp) => {
+    const navigate = useNavigate()
+    const { triggerOutro } = useOutro()
+
+    const handleClick = () => {
+        callOutro && triggerOutro()
+        setTimeout(() => {
+            navigate(url)
+        }, 3000)
+    }
     return (
         <>
             {type == null ? (
-                <Link
-                    to={`${url}`}
-                    className={`rounded-[7px] ${btnColor} ${textColor} text-20 border border-white/20 px-5 py-3 transition-all duration-500 ease-in-out hover:${btnColor}/40 flex items-center w-fit`}
+                <div
+                    onClick={handleClick}
+                    className={`rounded-[7px] ${btnColor} ${textColor} text-20 cursor-pointer border border-white/20 px-5 py-3 transition-all duration-500 ease-in-out hover:${btnColor}/40 flex w-fit items-center`}
                 >
                     {value}
                     {icon2 !== null ? (isLoading == true ? null : icon2) : null}
-                </Link>
+                </div>
             ) : (
                 <button
                     type={type}

@@ -23,3 +23,13 @@ export type WhatSetsUsApartItemsProp = {
     coated: string
     description?: string
 }
+
+export type HomeProductsProp = {
+    items: HomeProductItemsProp[]
+}
+
+export type HomeProductItemsProp = {
+    image: string
+    title: string
+    url: string
+}

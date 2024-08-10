@@ -4,26 +4,46 @@ import ScrollToTop from "./lib/ScrollToTop"
 import Homepage from "./pages/Home/Homepage"
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
+import PageIntroLoader from "./components/loader/PageIntroLoader"
+import { useContext } from "react"
+import { RouteProvider, useRouteContext } from "./lib/RouteContext"
+import PageOutroLoader from "./components/loader/PageOutroLoader"
+import TextFade from "./components/CustomTexts/TextFade"
+import { useOutro } from "./lib/OutroContext"
+
+const MainContent: React.FC = () => {
+    const { routeJustChanged } = useRouteContext()
+    const { isOutro } = useOutro()
+
+    return (
+        <>
+            {isOutro && <PageOutroLoader />}
+            {routeJustChanged ? (
+                <>
+                    {" "}
+                    <PageIntroLoader />
+                </>
+            ) : (
+                <>
+                    <ScrollToTop />
+                    <Navbar />
+                    <Routes>
+                        <Route path="/" element={<Homepage />} />
+                    </Routes>
+                    <Footer />
+                </>
+            )}
+        </>
+    )
+}
 
 function App() {
     return (
-        <div>
-            <BrowserRouter>
-                <ScrollToTop />
-                <Navbar />
-                <Routes>
-                    <Route
-                        path="/"
-                        element={
-                            <>
-                                <Homepage />
-                            </>
-                        }
-                    />
-                </Routes>
-                <Footer />
-            </BrowserRouter>
-        </div>
+        <BrowserRouter>
+            <RouteProvider>
+                <MainContent />
+            </RouteProvider>
+        </BrowserRouter>
     )
 }
 

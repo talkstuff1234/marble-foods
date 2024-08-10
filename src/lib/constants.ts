@@ -1,10 +1,11 @@
-import { NavItemsProps, WhatSetsUsApartProp } from "./types"
+import { HomeProductsProp, NavItemsProps, WhatSetsUsApartProp } from "./types"
 import APARTA1 from "../assets/apartA1.svg"
 import APARTA2 from "../assets/apartA2.svg"
 import APARTB1 from "../assets/apartB1.svg"
 import APARTB2 from "../assets/apartB2.svg"
 import APARTB3 from "../assets/apartB3.svg"
 import APARTB4 from "../assets/apartB4.svg"
+import SEAMSEED from "../assets/seam-seed.jpeg"
 
 export const NavItems: NavItemsProps = {
     items: [
@@ -101,5 +102,30 @@ export const WhatSetsUsApartData: WhatSetsUsApartProp = {
             description:
                 "We provide specialized consulting and general contracting services to both local and international companies. Our expertise in the agro-commodity sector helps businesses optimize their operations, improve supply chain management, and navigate the complexities of agricultural trade.",
         },
+    ],
+}
+
+export const HomeProductData: HomeProductsProp = {
+    items: [
+        {
+            image: SEAMSEED,
+            title: "Sesames seed",
+            url: "",
+        },
+        {
+            image: SEAMSEED,
+            title: "Sesames seed",
+            url: "",
+        },
+        {
+            image: SEAMSEED,
+            title: "Sesames seed",
+            url: "",
+        },
+        // {
+        //     image: "",
+        //     title: "",
+        //     url: "",
+        // },
     ],
 }

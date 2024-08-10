@@ -6,6 +6,8 @@ import P from "../../components/CustomTexts/P"
 import APARTC from "../../assets/apartC.svg"
 import { WhatSetsUsApartData } from "../../lib/constants"
 import { WhatSetsUsApartItemsProp } from "../../lib/types"
+import Button from "../../components/Buttons/Button"
+import { ArrowRight1 } from "../../assets/RenderedAssets"
 
 const SetsUsApartHomePage = () => {
     return (
@@ -107,6 +109,13 @@ const SetsUsApartHomePage = () => {
                         </div>
                     </div>
                 </TextFade>
+            </div>
+            <div className="mt-20 flex items-center justify-center">
+                <Button
+                    value={"Contact Us"}
+                    icon2={<ArrowRight1 className="ml-3 text-white" />}
+                    url="/contact"
+                />
             </div>
         </div>
     )
