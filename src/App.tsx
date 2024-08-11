@@ -10,6 +10,7 @@ import { RouteProvider, useRouteContext } from "./lib/RouteContext"
 import PageOutroLoader from "./components/loader/PageOutroLoader"
 import TextFade from "./components/CustomTexts/TextFade"
 import { useOutro } from "./lib/OutroContext"
+import AboutPage from "./pages/About/AboutPage"
 
 const MainContent: React.FC = () => {
     const { routeJustChanged } = useRouteContext()
@@ -29,6 +30,8 @@ const MainContent: React.FC = () => {
                 <>
                     <Routes>
                         <Route path="/" element={<Homepage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/about-us" element={<AboutPage />} />
                     </Routes>
                     <Footer />
                 </>
