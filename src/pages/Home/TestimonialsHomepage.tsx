@@ -76,7 +76,7 @@ const TestimonialsHomepage = () => {
             >
                 <H1 align="center">
                     What Our{" "}
-                    <span className="italic text-lightText">Clients</span>{" "}
+                    <span className="italic text-lightText">Clients</span> Say
                 </H1>
             </TextFade>{" "}
             <TextFade
