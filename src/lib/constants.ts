@@ -1,4 +1,9 @@
-import { HomeProductsProp, NavItemsProps, WhatSetsUsApartProp } from "./types"
+import {
+    FooterSection,
+    HomeProductsProp,
+    NavItemsProps,
+    WhatSetsUsApartProp,
+} from "./types"
 import APARTA1 from "../assets/apartA1.svg"
 import APARTA2 from "../assets/apartA2.svg"
 import APARTB1 from "../assets/apartB1.svg"
@@ -129,3 +134,41 @@ export const HomeProductData: HomeProductsProp = {
         // },
     ],
 }
+
+export const FOOTER_LINKS: FooterSection[] = [
+    {
+        title: "About Us",
+        items: [
+            { text: "Mission", link: "/mission" },
+            { text: "Team", link: "/team" },
+            { text: "Ethics", link: "/ethics" },
+            { text: "Certifications", link: "/certifications" },
+        ],
+    },
+    {
+        title: "Products",
+        items: [
+            { text: "Cashew Nuts", link: "/cashew-nuts" },
+            { text: "Cocoa", link: "/cocoa" },
+            { text: "Hibiscus Flower", link: "/hibiscus-flower" },
+            { text: "Sesame Seeds", link: "/sesame-seeds" },
+        ],
+    },
+    {
+        title: "Insight",
+        items: [
+            { text: "Company News", link: "/company-news" },
+            { text: "Industry News", link: "/industry-news" },
+            { text: "Product Updates", link: "/product-updates" },
+            { text: "Articles", link: "/articles" },
+        ],
+    },
+    {
+        title: "Get in Touch",
+        items: [
+            { text: "Contact Details", link: "/contact-details" },
+            { text: "FAQs", link: "/faqs" },
+            { text: "Live Chat", link: "/live-chat" },
+        ],
+    },
+]

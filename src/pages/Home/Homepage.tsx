@@ -6,6 +6,7 @@ import ProductsHomepage from "./ProductsHomepage"
 import GlobalReachHomepage from "./GlobalReachHomepage"
 import TestimonialsHomepage from "./TestimonialsHomepage"
 import ContactHomepage from "./ContactHomepage"
+import TrustedHomepage from "./TrustedHomepage"
 
 const Homepage = () => {
     return (
@@ -17,6 +18,7 @@ const Homepage = () => {
             <GlobalReachHomepage />
             <TestimonialsHomepage />
             <ContactHomepage />
+            <TrustedHomepage />
         </section>
     )
 }

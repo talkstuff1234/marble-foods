@@ -40,3 +40,13 @@ export type NavItemProp = {
     closeNavbar: () => void
     routeLink: (url: string, callOutro: boolean) => void
 }
+
+export type FooterLink = {
+    text: string
+    link: string
+}
+
+export type FooterSection = {
+    title: string
+    items: FooterLink[]
+}

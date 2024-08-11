@@ -114,7 +114,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div
-                        className="block md:hidden"
+                        className="block cursor-pointer md:hidden"
                         onClick={() => {
                             toggleNavbar()
                         }}
