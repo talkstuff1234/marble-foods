@@ -64,6 +64,81 @@ export const NavClose: React.FC<Props> = (props) => {
     )
 }
 
+export const Next: React.FC<Props> = (props) => {
+    return (
+        <svg
+            width="57"
+            height="57"
+            viewBox="0 0 57 57"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            {...props}
+        >
+            <rect
+                x="0.99707"
+                y="0.615723"
+                width="55"
+                height="55"
+                rx="27.5"
+                stroke="currentColor"
+            />
+            <path
+                d="M21.4971 28.1157H35.4971"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M28.4971 21.1157L35.4971 28.1157L28.4971 35.1157"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+    )
+}
+
+export const Prev: React.FC<Props> = (props) => {
+    return (
+        <svg
+            width="57"
+            height="57"
+            viewBox="0 0 57 57"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            {...props}
+        >
+            <g opacity="0.5">
+                <rect
+                    x="-0.5"
+                    y="0.5"
+                    width="55"
+                    height="55"
+                    rx="27.5"
+                    transform="matrix(-1 0 0 1 55.4971 0.115723)"
+                    stroke="currentColor"
+                />
+                <path
+                    d="M35.4971 28.1157H21.4971"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M28.4971 21.1157L21.4971 28.1157L28.4971 35.1157"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </g>
+        </svg>
+    )
+}
+
 export const NavDropdown: React.FC<Props> = (props) => {
     return (
         <svg

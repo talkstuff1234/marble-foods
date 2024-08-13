@@ -11,6 +11,11 @@ import APARTB2 from "../assets/apartB2.svg"
 import APARTB3 from "../assets/apartB3.svg"
 import APARTB4 from "../assets/apartB4.svg"
 import SEAMSEED from "../assets/seam-seed.jpeg"
+import TEAM1 from "../assets/team1.jpeg"
+import TEAM2 from "../assets/team1.jpeg"
+import FB from "../assets/teamFB.svg"
+import IG from "../assets/teamIG.svg"
+import TW from "../assets/teamTW.svg"
 
 export const NavItems: NavItemsProps = {
     items: [
@@ -171,4 +176,74 @@ export const FOOTER_LINKS: FooterSection[] = [
             { text: "Live Chat", link: "/live-chat" },
         ],
     },
+]
+
+export const teamMembers = [
+    {
+        name: "Abdullahi Naziru Abdullahi",
+        title: "President/CEO",
+        bio: "Abdullahi Naziru Abdullahi, President of Marble and Grove Nigeria Limited, holds a Bsc in Chemistry and Forensic Science from the University of Strathclyde, Scotland with an Msc in entrepreneurship and Innovation Management from the University of Surrey, UK.",
+        image: TEAM1,
+        socialMedia: [
+            { link: "https://www.facebook.com/", icon: FB },
+            { link: "https://www.twitter.com/", icon: TW },
+            { link: "https://www.instagram.com/", icon: IG },
+        ],
+    },
+    {
+        name: "John Doe",
+        title: "CTO",
+        bio: "John Doe, CTO of Marble and Grove Nigeria Limited, holds a Bsc in Computer Science from the University of Lagos, Nigeria with an Msc in Artificial Intelligence from the University of Cambridge, UK.",
+        image: TEAM2,
+        socialMedia: [
+            { link: "https://www.facebook.com/", icon: FB },
+            { link: "https://www.twitter.com/", icon: TW },
+            { link: "https://www.instagram.com/", icon: IG },
+        ],
+    },
+    {
+        name: "Abdullahi Naziru Abdullahi",
+        title: "President/CEO",
+        bio: "Abdullahi Naziru Abdullahi, President of Marble and Grove Nigeria Limited, holds a Bsc in Chemistry and Forensic Science from the University of Strathclyde, Scotland with an Msc in entrepreneurship and Innovation Management from the University of Surrey, UK.",
+        image: TEAM1,
+        socialMedia: [
+            { link: "https://www.facebook.com/", icon: FB },
+            { link: "https://www.twitter.com/", icon: TW },
+            { link: "https://www.instagram.com/", icon: IG },
+        ],
+    },
+    {
+        name: "John Doe",
+        title: "CTO",
+        bio: "John Doe, CTO of Marble and Grove Nigeria Limited, holds a Bsc in Computer Science from the University of Lagos, Nigeria with an Msc in Artificial Intelligence from the University of Cambridge, UK.",
+        image: TEAM2,
+        socialMedia: [
+            { link: "https://www.facebook.com/", icon: FB },
+            { link: "https://www.twitter.com/", icon: TW },
+            { link: "https://www.instagram.com/", icon: IG },
+        ],
+    },
+    {
+        name: "Abdullahi Naziru Abdullahi",
+        title: "President/CEO",
+        bio: "Abdullahi Naziru Abdullahi, President of Marble and Grove Nigeria Limited, holds a Bsc in Chemistry and Forensic Science from the University of Strathclyde, Scotland with an Msc in entrepreneurship and Innovation Management from the University of Surrey, UK.",
+        image: TEAM1,
+        socialMedia: [
+            { link: "https://www.facebook.com/", icon: FB },
+            { link: "https://www.twitter.com/", icon: TW },
+            { link: "https://www.instagram.com/", icon: IG },
+        ],
+    },
+    {
+        name: "John Doe",
+        title: "CTO",
+        bio: "John Doe, CTO of Marble and Grove Nigeria Limited, holds a Bsc in Computer Science from the University of Lagos, Nigeria with an Msc in Artificial Intelligence from the University of Cambridge, UK.",
+        image: TEAM2,
+        socialMedia: [
+            { link: "https://www.facebook.com/", icon: FB },
+            { link: "https://www.twitter.com/", icon: TW },
+            { link: "https://www.instagram.com/", icon: IG },
+        ],
+    },
+    // Add more team members here
 ]
