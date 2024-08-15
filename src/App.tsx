@@ -12,6 +12,7 @@ import TextFade from "./components/CustomTexts/TextFade"
 import { useOutro } from "./lib/OutroContext"
 import AboutPage from "./pages/About/AboutPage"
 import SustainabilityPage from "./pages/Sustainability/SustainabilityPage"
+import ContactPage from "./pages/Contact/ContactPage"
 
 const MainContent: React.FC = () => {
     const { routeJustChanged } = useRouteContext()
@@ -32,7 +33,9 @@ const MainContent: React.FC = () => {
                     <Routes>
                         <Route path="/" element={<Homepage />} />
                         <Route path="/about" element={<AboutPage />} />
-                        <Route path="/about-us" element={<AboutPage />} />
+                        <Route path="/about-us" element={<AboutPage />} />{" "}
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/contact-us" element={<ContactPage />} />
                         <Route
                             path="/sustainability"
                             element={<SustainabilityPage />}

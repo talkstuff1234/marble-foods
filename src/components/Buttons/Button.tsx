@@ -56,15 +56,16 @@ const Button = ({
                     disabled={disabled}
                     className={` ${
                         isLoading ? "cursor-default" : "cursor-pointer"
-                    } bold h-[45px]  w-[333px]  ${btnColor} ${textColor}mt-[50px] flex items-center justify-center rounded-[50px] border-[1px] border-gray-700`}
+                    } rounded-[7px] ${btnColor} ${textColor} text-20 border border-white/20 px-5 py-3 transition-all duration-500 ease-in-out hover:${btnColor}/40 flex w-fit items-center`}
                     onClick={isLoading ? () => {} : click}
                 >
-                    {icon === null ? null : (
-                        <img src={icon} alt="icon" className="mr-3" />
-                    )}
-                    {icon2 !== null ? (isLoading == true ? null : icon2) : null}
-                    {isLoading ? <LoadingAnimation /> : null}
                     {value}
+                    {icon2 !== null ? (isLoading == true ? null : icon2) : null}
+                    {isLoading ? (
+                        <span className="mr-0 pl-5 pr-0">
+                            <LoadingAnimation />
+                        </span>
+                    ) : null}
                 </button>
             )}
         </>

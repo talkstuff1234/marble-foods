@@ -133,6 +133,7 @@ const Navbar = () => {
                         </div>
                         <Button
                             value="Contact Us"
+                            url="contact"
                             icon2={
                                 <NavDropdown className="rotate-[-90deg] text-white" />
                             }
