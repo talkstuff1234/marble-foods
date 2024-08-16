@@ -50,3 +50,11 @@ export type FooterSection = {
     title: string
     items: FooterLink[]
 }
+
+
+export type RelatedProductItemProp = {
+    productName: string
+    productImageUrl: string
+    id: string
+    productCode: string
+}

@@ -6,17 +6,19 @@ const H1 = ({
     textColor = "text-darkText",
     textSize = "text-[40px]",
     textWeight = "",
+    leading = "leading-[3rem]",
 }: {
     children: ReactNode
     align?: "left" | "center"
     textColor?: string
     textSize?: string
     textWeight?: string
+    leading?: string
 }) => {
     return (
         <h1
             className={`${textColor}
-            ${textSize} ${textWeight} ${align === "center" ? "text-center" : ""} text-[40px] leading-[3rem]`}
+            ${textSize} ${leading} ${textWeight} ${align === "center" ? "text-center" : ""} `}
         >
             {children}
         </h1>
