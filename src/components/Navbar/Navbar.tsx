@@ -1,7 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react"
 import LOGO from "../../assets/logo.png"
 import { NavItems } from "../../lib/constants"
-import { EachNavItemsProps, NavItemsProps } from "../../lib/types"
+import {
+    EachNavItemsProps,
+    NavItemsProps,
+    ProductNavbarItemProp,
+} from "../../lib/types"
 import P from "../CustomTexts/P"
 import { useNavigate } from "react-router-dom"
 import { useOutro } from "../../lib/OutroContext"
@@ -14,6 +18,8 @@ import {
 } from "../../assets/RenderedAssets"
 import Button from "../Buttons/Button"
 import { NavItem } from "./NavItems"
+import { get } from "../../service/api_service"
+import { Tooltip } from "react-tooltip"
 
 const Navbar = () => {
     const [isOpenNavbar, setIsOpenNavbar] = useState(false)
@@ -25,6 +31,29 @@ const Navbar = () => {
     const { triggerOutro } = useOutro()
     const navigate = useNavigate()
     const { currentRoute } = useRouteContext()
+    const [isLoading, setIsLoading] = useState(false)
+    const [allNavbarProducts, setAllNavbarProducts] = useState([])
+
+    useEffect(() => {
+        handleGetCourses()
+    }, [])
+
+    const handleGetCourses = async () => {
+        setIsLoading(true)
+        try {
+            const response = await get("navbar-products")
+            setIsLoading(false)
+            if (response.code === 200) {
+                setAllNavbarProducts(response.body)
+                console.log(allNavbarProducts)
+            } else {
+                setAllNavbarProducts([])
+            }
+        } catch (error) {
+            setIsLoading(false)
+            setAllNavbarProducts([])
+        }
+    }
 
     const routeLink = (url: string, callOutro: boolean) => {
         callOutro && triggerOutro()
@@ -93,19 +122,116 @@ const Navbar = () => {
                                             className="group flex w-fit cursor-pointer items-center gap-3 "
                                             key={index}
                                             onClick={() => {
-                                                routeLink(item.url, true)
+                                                if (item.value == "Products") {
+                                                } else {
+                                                    routeLink(item.url, true)
+                                                }
                                             }}
                                         >
                                             <p
+                                                id={item.value}
                                                 className={`text-[16px]  font-[400] transition-all duration-1000 ease-in-out group-hover:text-primaryLight ${currentRoute === item.url ? "text-primaryLight" : "text-lightText "} `}
                                             >
                                                 {item.value}
                                             </p>
                                             {item.dropdownItem !==
                                                 undefined && (
-                                                <NavDropdown
-                                                    className={`${currentRoute === item.url ? "text-primaryLight" : "text-lightText "} `}
-                                                />
+                                                <div>
+                                                    <NavDropdown
+                                                        className={`${currentRoute === item.url ? "text-primaryLight" : "text-lightText "} `}
+                                                    />
+                                                    <Tooltip
+                                                        anchorSelect={`#${item.value}`}
+                                                        className="bg-white"
+                                                        place="top-start"
+                                                        style={{
+                                                            backgroundColor:
+                                                                "white",
+
+                                                            boxShadow:
+                                                                "0px 2px 10px 0px #0000001A",
+                                                            width: "fit",
+                                                            padding: "20px",
+                                                        }}
+                                                        clickable
+                                                    >
+                                                        {item.value ==
+                                                            "Products" && (
+                                                            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+                                                                {allNavbarProducts.map(
+                                                                    (
+                                                                        data: ProductNavbarItemProp,
+                                                                        index: number,
+                                                                    ) => {
+                                                                        return (
+                                                                            <div
+                                                                                className="flex items-center gap-5"
+                                                                                key={
+                                                                                    index
+                                                                                }
+                                                                                onClick={() => {
+                                                                                    routeLink(
+                                                                                        `products/${data.productCode}`,
+                                                                                        true,
+                                                                                    )
+                                                                                }}
+                                                                            >
+                                                                                <div className="flex h-[55px] w-[55px] items-center justify-center overflow-hidden rounded-[8px] bg-[#F5F5F5] p-3">
+                                                                                    <img
+                                                                                        src={
+                                                                                            data.productIcon
+                                                                                        }
+                                                                                        alt=""
+                                                                                        className="h-full w-full object-cover"
+                                                                                    />
+                                                                                </div>
+                                                                                <div>
+                                                                                    <h2 className=" text-[16px] font-[400]  text-darkText">
+                                                                                        {
+                                                                                            data.productName
+                                                                                        }
+                                                                                    </h2>
+                                                                                    <P
+                                                                                        mode={
+                                                                                            "light"
+                                                                                        }
+                                                                                        fontSize="text-[13px]"
+                                                                                    >
+                                                                                        {
+                                                                                            data.productShortDescription
+                                                                                        }
+                                                                                    </P>
+                                                                                </div>
+                                                                            </div>
+                                                                        )
+                                                                    },
+                                                                )}
+                                                            </div>
+                                                        )}
+                                                        {/* {item.dropdownItem.map(
+                                                            (
+                                                                dropdownItem,
+                                                                dropdownIndex,
+                                                            ) => (
+                                                                <li
+                                                                    key={
+                                                                        dropdownIndex
+                                                                    }
+                                                                >
+                                                                    <a
+                                                                        href={
+                                                                            dropdownItem.link
+                                                                        }
+                                                                    >
+                                                                        {
+                                                                            dropdownItem.value
+                                                                        }
+                                                                    </a>
+                                                                </li>
+                                                            ),
+                                                        )} */}
+                                                    </Tooltip>
+                                                </div>
                                             )}
                                         </div>
                                     )

@@ -76,3 +76,12 @@ export type ProductReview = {
     reviewRating: number
     id: string
 }
+
+export type ProductNavbarItemProp = {
+    productName: string
+    productShortDescription: string
+    productIcon: string
+    id: string
+    productCode: string
+}
+

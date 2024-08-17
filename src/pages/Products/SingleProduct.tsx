@@ -14,7 +14,7 @@ import PricingDetailsTab from "./PricingDetailsTab"
 
 const SingleProduct = () => {
     const { productCode } = useParams()
-    const [activeTab, setActiveTab] = useState(0)
+    const [activeTab, setActiveTab] = useState(1)
     const [isLoading, setIsLoading] = useState(false)
     const [productDetails, setProductDetails] =
         useState<ProductDetailsProp | null>(null)
