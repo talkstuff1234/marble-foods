@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { ProductReview } from "../../lib/types"
 import TextFade from "../../components/CustomTexts/TextFade"
 import { Stars, Stars2 } from "../../assets/RenderedAssets"
@@ -27,6 +27,9 @@ const ReviewsTab = ({
         reviewRating: 1,
     })
     const [reviews, setReviews] = useState(productReviews) // <--- Add this line
+    useEffect(() => {
+        setReviews(productReviews)
+    }, [productReviews])
 
     const handleInputChange = (
         event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,

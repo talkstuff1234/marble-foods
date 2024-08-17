@@ -39,6 +39,7 @@ export type NavItemProp = {
     isOpenNavbar: boolean
     closeNavbar: () => void
     routeLink: (url: string, callOutro: boolean) => void
+    allNavbarProducts?: ProductNavbarItemProp[]
 }
 
 export type FooterLink = {

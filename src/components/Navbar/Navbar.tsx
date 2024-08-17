@@ -45,7 +45,6 @@ const Navbar = () => {
             setIsLoading(false)
             if (response.code === 200) {
                 setAllNavbarProducts(response.body)
-                console.log(allNavbarProducts)
             } else {
                 setAllNavbarProducts([])
             }
@@ -283,6 +282,7 @@ const Navbar = () => {
                         isOpenNavbar={isOpenNavbar}
                         closeNavbar={toggleNavbar}
                         routeLink={routeLink}
+                        allNavbarProducts={allNavbarProducts}
                     />
                 ))}{" "}
             </div>
