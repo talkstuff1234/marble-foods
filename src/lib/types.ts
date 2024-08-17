@@ -51,10 +51,28 @@ export type FooterSection = {
     items: FooterLink[]
 }
 
-
 export type RelatedProductItemProp = {
     productName: string
     productImageUrl: string
     id: string
     productCode: string
+}
+
+export type ProductDetailsProp = {
+    productName: string
+    productShortDescription: string
+    productFullDescription: string
+    productImageUrl: string
+    productReviewImageUrl: string
+    productReviews: ProductReview[]
+    id: string
+    productCode: string
+}
+
+export type ProductReview = {
+    reviewName: string
+    reviewEmail: string
+    reviewComments: string
+    reviewRating: number
+    id: string
 }
