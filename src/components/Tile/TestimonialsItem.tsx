@@ -11,7 +11,7 @@ const TestimonialsItem = () => {
                     className="h-[42px] w-[42px] rounded-full"
                 />
                 <div>
-                    <h2 className="text-[16px] font-[700] text-[#212121]">
+                    <h2 className="text-[16px] font-[700] text-darkText">
                         John Abel
                     </h2>
                     <p className="text-[11px] font-[400] text-lightText">

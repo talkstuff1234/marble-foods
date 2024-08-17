@@ -8,7 +8,7 @@ type ButtonProp = {
     value: string
     textColor?: string
     btnColor?: string
-    type?: "button" | "reset" | "submit" | undefined
+    type?: "button" | "reset" | "submit" | undefined | "tab"
     click?: () => void
     disabled?: boolean
     isLoading?: boolean
@@ -33,7 +33,6 @@ const Button = ({
 }: ButtonProp) => {
     const navigate = useNavigate()
     const { triggerOutro } = useOutro()
-
     const handleClick = () => {
         callOutro && triggerOutro()
         setTimeout(() => {
@@ -51,22 +50,42 @@ const Button = ({
                     {icon2 !== null ? (isLoading == true ? null : icon2) : null}
                 </div>
             ) : (
-                <button
-                    type={type}
-                    disabled={disabled}
-                    className={` ${
-                        isLoading ? "cursor-default" : "cursor-pointer"
-                    } rounded-[7px] ${btnColor} ${textColor} text-20 border border-white/20 px-5 py-3 transition-all duration-500 ease-in-out hover:${btnColor}/40 flex w-fit items-center`}
-                    onClick={isLoading ? () => {} : click}
-                >
-                    {value}
-                    {icon2 !== null ? (isLoading == true ? null : icon2) : null}
-                    {isLoading ? (
-                        <span className="mr-0 pl-5 pr-0">
-                            <LoadingAnimation />
-                        </span>
-                    ) : null}
-                </button>
+                <>
+                    {type == "tab" ? (
+                        <div
+                            onClick={click}
+                            className={`rounded-[7px] ${btnColor} ${textColor} text-20 cursor-pointer border border-white/20 px-5 py-3 transition-all duration-500 ease-in-out hover:${btnColor}/40 flex w-fit items-center`}
+                        >
+                            {value}
+                            {icon2 !== null
+                                ? isLoading == true
+                                    ? null
+                                    : icon2
+                                : null}
+                        </div>
+                    ) : (
+                        <button
+                            type={type}
+                            disabled={disabled}
+                            className={` ${
+                                isLoading ? "cursor-default" : "cursor-pointer"
+                            } rounded-[7px] ${btnColor} ${textColor} text-20 border border-white/20 px-5 py-3 transition-all duration-500 ease-in-out hover:${btnColor}/40 flex w-fit items-center`}
+                            onClick={isLoading ? () => {} : click}
+                        >
+                            {value}
+                            {icon2 !== null
+                                ? isLoading == true
+                                    ? null
+                                    : icon2
+                                : null}
+                            {isLoading ? (
+                                <span className="mr-0 pl-5 pr-0">
+                                    <LoadingAnimation />
+                                </span>
+                            ) : null}
+                        </button>
+                    )}
+                </>
             )}
         </>
     )

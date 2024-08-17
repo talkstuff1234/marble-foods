@@ -105,7 +105,7 @@ const RelatedProducts = () => {
                                                         <H1
                                                             textWeight="font-[700]"
                                                             textSize="text-[16px]"
-                                                            textColor="text-[#212121]"
+                                                            textColor="text-darkText"
                                                             leading="leading-auto"
                                                         >
                                                             {data.productName}

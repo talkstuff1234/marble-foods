@@ -244,7 +244,6 @@ export const LoadingAnimation2 = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            
         >
             <circle
                 className="opacity-25"
@@ -259,6 +258,47 @@ export const LoadingAnimation2 = () => {
                 fill="#0A1F0E"
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
             ></path>
+        </svg>
+    )
+}
+export const Stars = () => {
+    return (
+        <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g clip-path="url(#clip0_2145_15120)">
+                <path
+                    d="M9.61967 6.66634L7.99967 1.33301L6.37967 6.66634H1.33301L5.45301 9.60634L3.88634 14.6663L7.99967 11.5397L12.1197 14.6663L10.553 9.60634L14.6663 6.66634H9.61967Z"
+                    fill="#FEB423"
+                />
+            </g>
+            <defs>
+                <clipPath id="clip0_2145_15120">
+                    <rect width="16" height="16" fill="white" />
+                </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
+export const Stars2: React.FC<Props> = (props) => {
+    return (
+        <svg
+            width="25"
+            height="23"
+            viewBox="0 0 25 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            {...props}
+        >
+            <path
+                d="M12.4 0L15.184 8.56819H24.1931L16.9046 13.8636L19.6885 22.4318L12.4 17.1364L5.11146 22.4318L7.89544 13.8636L0.606899 8.56819H9.61603L12.4 0Z"
+                fill="currentColor"
+            />
         </svg>
     )
 }

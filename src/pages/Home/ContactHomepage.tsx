@@ -28,7 +28,7 @@ const ContactHomepage = () => {
                         style="transition-all duration-1000 ease-in-out"
                     >
                         <div className="group relative  flex w-full cursor-pointer flex-col overflow-hidden rounded-[16px] border border-[#EFEFFE] px-10 pb-[10dvh] pt-[15dvh] transition-all  duration-1000 ease-in-out">
-                            <h2 className="text-[33px] font-[400] text-[#212121]">
+                            <h2 className="text-[33px] font-[400] text-darkText">
                                 Buy a product?
                             </h2>
 
@@ -59,7 +59,7 @@ const ContactHomepage = () => {
                         style="transition-all duration-1000 ease-in-out"
                     >
                         <div className="group relative flex w-full cursor-pointer flex-col overflow-hidden rounded-[16px] border border-[#EFEFFE] px-10 pb-[10dvh] pt-[15dvh] transition-all  duration-1000 ease-in-out ">
-                            <h2 className="text-[33px] font-[400] text-[#212121]">
+                            <h2 className="text-[33px] font-[400] text-darkText">
                                 Customer service?
                             </h2>
 
