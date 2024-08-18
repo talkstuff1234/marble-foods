@@ -14,16 +14,14 @@ const HeroHomepage = () => {
                 style="transition-all duration-1000 ease-in-out"
             >
                 <H1 align="center">
-                    Rich <span className="italic text-lightText">flavours</span>
+                    Rich{" "}
+                    <span className="font-[700] italic text-primaryLight">
+                        flavours
+                    </span>
                     , Quality{" "}
                     <span className="italic text-lightText">flavours</span>,
                     <br />
-                    Global{" "}
-                    <span
-                        className="italic text-lightText"
-                    >
-                        Reach
-                    </span>
+                    Global <span className="italic text-lightText">Reach</span>
                 </H1>
             </TextFade>{" "}
             <TextFade
