@@ -10,7 +10,7 @@ const ContactHomepage = () => {
     return (
         <div className=" flex flex-col items-center justify-center px-[5%] py-[10dvh]">
             {" "}
-            <HeadingIntro value="Testimonials" />
+            <HeadingIntro value="Contact us" />
             <TextFade
                 animation="fade-down"
                 isSpan={false}
@@ -18,7 +18,10 @@ const ContactHomepage = () => {
             >
                 <H1 align="center">
                     What brings you here{" "}
-                    <span className="italic text-lightText">today</span> ?
+                    <span className="font-[700] italic text-primaryLight">
+                        today
+                    </span>{" "}
+                    ?
                 </H1>
             </TextFade>{" "}
             <div className="mt-32 flex w-full flex-col items-center justify-between gap-10 md:flex-row">

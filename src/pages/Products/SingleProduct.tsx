@@ -13,6 +13,7 @@ import PricingDetailsTab from "./PricingDetailsTab"
 import Skeleton from "react-loading-skeleton"
 import "react-loading-skeleton/dist/skeleton.css"
 import SkelentonLoader from "../../components/loader/SkelentonLoader"
+import { ArrowRight1 } from "../../assets/RenderedAssets"
 
 const SingleProduct = () => {
     const { productCode } = useParams()
@@ -43,65 +44,79 @@ const SingleProduct = () => {
 
     return (
         <div>
-            <div className="flex flex-col items-center justify-center px-[5%] py-[20vh]">
-                {isLoading ? (
-                    <div className="mt-[5dvh] flex w-full flex-col items-center justify-center gap-2 md:w-[80%] ">
-                        <SkelentonLoader width="w-1/5" />
-                    </div>
-                ) : (
-                    <TextFade
-                        animation="fade-down"
-                        isSpan={false}
-                        style="transition-all duration-1000 ease-in-out"
-                    >
-                        <H1 align="center">{productDetails?.productName}</H1>
-                    </TextFade>
-                )}
+            <div className="flex flex-col items-center justify-center px-[5%] pb-[20vh] pt-[10vh] md:pt-[20vh]">
+                <div className="flex w-full flex-col items-center rounded-[8px] border bg-[#F9F9FB] px-4 py-12">
+                    {isLoading ? (
+                        <div className="mt-[5dvh] flex w-full flex-col items-center justify-center gap-2 md:w-[80%] ">
+                            <SkelentonLoader width="w-1/5" />
+                        </div>
+                    ) : (
+                        <TextFade
+                            animation="fade-down"
+                            isSpan={false}
+                            style="transition-all duration-1000 ease-in-out"
+                        >
+                            <H1 align="center">
+                                {productDetails?.productName}
+                            </H1>
+                        </TextFade>
+                    )}
 
-                {isLoading ? (
-                    <div className="mb-[20dvh] mt-10 flex w-full flex-col items-center justify-center gap-2 md:w-[80%] ">
-                        <SkelentonLoader />
-                        <SkelentonLoader width="w-1/2" />
-                    </div>
-                ) : (
-                    <TextFade
-                        animation="fade-down"
-                        style="transition-all duration-1000 ease-in-out mt-5 mb-10"
-                    >
-                        <P mode={"light"} align="center">
-                            {productDetails?.productShortDescription}
-                        </P>
-                    </TextFade>
-                )}
+                    {isLoading ? (
+                        <div className="mb-[20dvh] mt-10 flex w-full flex-col items-center justify-center gap-2 md:w-[80%] ">
+                            <SkelentonLoader />
+                            <SkelentonLoader width="w-1/2" />
+                        </div>
+                    ) : (
+                        <TextFade
+                            animation="fade-down"
+                            style="transition-all duration-1000 ease-in-out mt-5 mb-10"
+                        >
+                            <P mode={"light"} align="center">
+                                {productDetails?.productShortDescription}
+                            </P>
+                        </TextFade>
+                    )}
 
-                {isLoading ? (
-                    <SkelentonLoader height={600} />
-                ) : (
-                    <div className="mt-20 h-[50dvh] w-full overflow-hidden rounded-[18px] bg-black">
-                        <img
-                            src={productDetails?.productImageUrl}
-                            alt="hero image"
-                            className="h-full w-full object-cover opacity-80"
-                        />
-                    </div>
-                )}
+                    {isLoading ? (
+                        <SkelentonLoader height={600} />
+                    ) : (
+                        <div className="mt-10 h-[50dvh] w-full overflow-hidden rounded-[18px] bg-black">
+                            <img
+                                src={productDetails?.productImageUrl}
+                                alt="hero image"
+                                className="h-full w-full object-cover opacity-80"
+                            />
+                        </div>
+                    )}
 
-                {isLoading ? (
-                    <div className="mt-20 flex w-full flex-col items-center justify-center gap-2 md:w-[80%] ">
-                        <SkelentonLoader />
-                        <SkelentonLoader width="w-1/2" />
-                        <SkelentonLoader width="w-1/4" />
-                    </div>
-                ) : (
-                    <TextFade
-                        animation="fade-down"
-                        style="transition-all duration-1000 ease-in-out mt-10 mb-10"
-                    >
-                        <P mode={"light"} align="center">
-                            {productDetails?.productFullDescription}
-                        </P>
-                    </TextFade>
-                )}
+                    {isLoading ? (
+                        <div className="mt-20 flex w-full flex-col items-center justify-center gap-2 md:w-[80%] ">
+                            <SkelentonLoader />
+                            <SkelentonLoader width="w-1/2" />
+                            <SkelentonLoader width="w-1/4" />
+                        </div>
+                    ) : (
+                        <div className="flex w-full flex-col items-center justify-center">
+                            <TextFade
+                                animation="fade-down"
+                                style="transition-all duration-1000 ease-in-out mt-10 mb-10"
+                            >
+                                <P mode={"light"} align="center">
+                                    {productDetails?.productFullDescription}
+                                </P>
+                            </TextFade>
+                            <div className="my-t-5"></div>
+                            <Button
+                                value={"Order Now"}
+                                icon2={
+                                    <ArrowRight1 className="ml-3 text-white" />
+                                }
+                                url="/contact"
+                            />
+                        </div>
+                    )}
+                </div>
 
                 <div className="mt-[20dvh] flex w-full flex-col-reverse items-start justify-between gap-20 md:flex-row">
                     <div className="w-full md:w-[45%]">

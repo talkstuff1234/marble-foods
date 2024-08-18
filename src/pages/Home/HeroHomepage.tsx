@@ -19,9 +19,15 @@ const HeroHomepage = () => {
                         flavours
                     </span>
                     , Quality{" "}
-                    <span className="italic text-lightText">flavours</span>,
+                    <span className="font-[700] italic text-primaryLight">
+                        flavours
+                    </span>
+                    ,
                     <br />
-                    Global <span className="italic text-lightText">Reach</span>
+                    Global{" "}
+                    <span className="font-[700] italic text-primaryLight">
+                        Reach
+                    </span>
                 </H1>
             </TextFade>{" "}
             <TextFade

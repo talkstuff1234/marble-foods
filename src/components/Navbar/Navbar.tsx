@@ -285,6 +285,14 @@ const Navbar = () => {
                         allNavbarProducts={allNavbarProducts}
                     />
                 ))}{" "}
+                <div className="mt-10"></div>
+                <Button
+                    value="Contact Us"
+                    url="contact"
+                    icon2={
+                        <NavDropdown className="rotate-[-90deg] text-white" />
+                    }
+                />
             </div>
         </>
     )

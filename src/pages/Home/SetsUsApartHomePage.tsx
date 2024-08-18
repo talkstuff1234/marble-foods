@@ -23,7 +23,7 @@ const SetsUsApartHomePage = () => {
                         <H1>
                             Delivering Quality Commodities,
                             <br />
-                            <span className="italic text-lightText">
+                            <span className="font-[700] italic text-primaryLight">
                                 Seamlessly
                             </span>
                         </H1>

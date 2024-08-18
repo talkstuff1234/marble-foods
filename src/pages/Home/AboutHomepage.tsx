@@ -5,11 +5,11 @@ import H1 from "../../components/CustomTexts/H1"
 import P from "../../components/CustomTexts/P"
 import Button from "../../components/Buttons/Button"
 import { ArrowRight1 } from "../../assets/RenderedAssets"
-
+import ABTHOME from "../../assets/abtHome.png"
 const AboutHomepage = () => {
     return (
-        <div className="bg-primaryDark px-[5%] py-[30vh]">
-            <div className="w-full md:w-[35%]">
+        <div className="flex flex-col justify-between gap-10 bg-primaryDark py-[10vh] md:flex-row md:gap-0 md:pl-[5%]">
+            <div className="flex w-full flex-col items-start justify-center pl-[5%] md:w-[35%] md:pl-0">
                 <HeadingIntro value="Who we are" />
                 <div className="my-4"></div>
                 <TextFade
@@ -43,6 +43,13 @@ const AboutHomepage = () => {
                         url="/about"
                     />
                 </TextFade>
+            </div>
+            <div className="w-full md:w-[65%]">
+                <img
+                    src={ABTHOME}
+                    alt="hero image"
+                    className="h-full w-full object-cover"
+                />
             </div>
         </div>
     )

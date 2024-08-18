@@ -26,7 +26,7 @@ const StarRating: React.FC<StarRatingProps> = ({ initialRating, onChange }) => {
     return (
         <div className="mt-10">
             <h2 className="text-[13px] font-[400] text-darkText">Ratings</h2>
-            <div className="mt-3 flex items-center gap-5">
+            <div className="mt-3 flex flex-shrink items-center gap-5">
                 {[...Array(5)].map((_, index) => (
                     <div
                         key={index}
