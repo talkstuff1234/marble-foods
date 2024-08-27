@@ -97,7 +97,7 @@ const RelatedProducts = () => {
                                                             src={
                                                                 data.productImageUrl
                                                             }
-                                                            alt=""
+                                                            alt={data.productName}
                                                             className="h-full w-full object-cover opacity-80 transition-all duration-1000 ease-in-out group-hover:scale-110"
                                                         />
                                                     </div>

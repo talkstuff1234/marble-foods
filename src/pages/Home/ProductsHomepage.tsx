@@ -62,7 +62,7 @@ const ProductsHomepage = () => {
                                     >
                                         <img
                                             src={item.image}
-                                            alt=""
+                                            alt={item.title}
                                             className="w-full rounded-[5px]"
                                         />
                                         <div className="mt-[16px] flex justify-between">

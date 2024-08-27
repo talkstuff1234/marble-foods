@@ -62,7 +62,7 @@ const GlobalReachHomepage = () => {
                 </TextFade>
             </div>
             <div className="flex w-full flex-col gap-5 md:w-[55%] md:items-end">
-                <img src={MAP} alt="" className="w-full" />
+                <img src={MAP} alt="global map" className="w-full" />
                 <div className="px-[5%]">
                     <P mode={"light"}>
                         We primarily target Stores, malls and supermarkets in

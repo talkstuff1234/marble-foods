@@ -7,7 +7,7 @@ const TestimonialsItem = () => {
             <div className="flex items-center gap-6">
                 <img
                     src={TESTI}
-                    alt=""
+                    alt="testimonial profile"
                     className="h-[42px] w-[42px] rounded-full"
                 />
                 <div>

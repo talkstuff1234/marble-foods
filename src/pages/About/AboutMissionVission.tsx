@@ -10,7 +10,7 @@ const AboutMissionVission = () => {
         <div className="px-[5%] py-[10dvh]">
             <div className="mb-10 flex flex-col items-center gap-10  md:mb-0 md:flex-row md:gap-0">
                 <div className="w-full md:w-[55%]">
-                    <img src={MISSIONIMG} alt="" className="w-full" />
+                    <img src={MISSIONIMG} alt="mission" className="w-full" />
                 </div>
                 <div className="w-full pl-0 md:w-[45%] md:pl-5">
                     <TextFade
@@ -61,7 +61,7 @@ const AboutMissionVission = () => {
                     </TextFade>
                 </div>
                 <div className="w-full md:w-[55%]">
-                    <img src={VISIONIMG} alt="" className="w-full" />
+                    <img src={VISIONIMG} alt="vision" className="w-full" />
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ const SusHero = () => {
         <div className="mb-[10dvh] mt-[20dvh]  px-[5%]">
             <div className="flex flex-col items-center gap-20 md:flex-row">
                 <div className="flex h-[50dvh] w-full items-start justify-center overflow-hidden rounded-r-[8px] md:w-[55%]">
-                    <img src={SUS1} alt="" className="w-full" />
+                    <img src={SUS1} alt="marble foods" className="w-full" />
                 </div>
                 <div className="w-full  md:w-[45%] ">
                     <TextFade
@@ -123,13 +123,13 @@ const SusHero = () => {
                 <div className="flex h-[50dvh] w-full items-start justify-center overflow-hidden rounded-br-[8px] rounded-tl-[8px] md:mt-10 md:w-[55%]">
                     <img
                         src={SUS2}
-                        alt=""
+                        alt="We Assure Quality and Safety"
                         className="h-full w-full object-cover"
                     />
                 </div>
             </div>
             <div className="mt-32 flex flex-col items-start gap-10 rounded-[10px] border border-[#E1E4ED] shadow-[0_1px_4px_0px_#19213D14]">
-                <div className="w-full md:w-[55%] p-5 md:py-10 md:pl-10">
+                <div className="w-full p-5 md:w-[55%] md:py-10 md:pl-10">
                     <TextFade
                         animation="fade-right"
                         isSpan={false}
@@ -157,7 +157,7 @@ const SusHero = () => {
                 <div className="flex h-[50dvh] w-full items-center justify-center overflow-hidden rounded-[8px]">
                     <img
                         src={SUS3}
-                        alt=""
+                        alt="We are Transparent and Accountable"
                         className="h-full w-full object-cover"
                     />
                 </div>

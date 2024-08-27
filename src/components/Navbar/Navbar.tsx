@@ -110,7 +110,7 @@ const Navbar = () => {
                     <div className="flex items-center gap-16">
                         <img
                             src={LOGO}
-                            alt=""
+                            alt="logo"
                             className="w-[90px] md:w-[116px]"
                         />
                         <div className="hidden items-center gap-10 md:flex">
@@ -180,7 +180,7 @@ const Navbar = () => {
                                                                                         src={
                                                                                             data.productIcon
                                                                                         }
-                                                                                        alt=""
+                                                                                        alt={data.productName}
                                                                                         className="h-full w-full object-cover"
                                                                                     />
                                                                                 </div>

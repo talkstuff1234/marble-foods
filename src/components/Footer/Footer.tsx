@@ -30,11 +30,11 @@ const Footer = () => {
                         commodity needs.
                     </P>
                     <div className="flex items-center gap-7">
-                        <img src={FB} alt="" />
-                        <img src={TW} alt="" />
-                        <img src={IN} alt="" />
-                        <img src={LI} alt="" />
-                        <img src={YT} alt="" />
+                        <img src={FB} alt="facebook" />
+                        <img src={TW} alt="twitter" />
+                        <img src={IN} alt="instagram" />
+                        <img src={LI} alt="linkedin" />
+                        <img src={YT} alt="youtube" />
                     </div>
                 </div>
                 <div className="flex w-full flex-col justify-between gap-10  md:w-[80%] md:flex-row md:gap-0">

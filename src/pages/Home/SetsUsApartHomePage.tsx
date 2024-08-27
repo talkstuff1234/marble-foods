@@ -64,7 +64,7 @@ const SetsUsApartHomePage = () => {
                                                     return (
                                                         <img
                                                             src={imageItem}
-                                                            alt=""
+                                                            alt={ITEM.title}
                                                             className="h-[100px] w-[100px]"
                                                             key={imageKey}
                                                         />
@@ -90,7 +90,7 @@ const SetsUsApartHomePage = () => {
                     style="transition-all duration-1000 ease-in-out"
                 >
                     <div className="border-1 flex w-fit flex-col gap-2 rounded-[16px] border border-[#f1f1f1] bg-gradient-to-b from-[#FBFCFD] to-[#F7F7F7] ">
-                        <img src={APARTC} alt="" className="w-full" />
+                        <img src={APARTC} alt="what sets us apart" className="w-full" />
                         <div className="flex flex-col gap-2 px-3 py-14">
                             <h4 className="text-[16px] font-[700] ">
                                 Custom Packaging Solutions

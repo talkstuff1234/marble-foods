@@ -58,7 +58,7 @@ const ContactHome = () => {
                 <div className="hidden w-full  items-center justify-center  overflow-hidden rounded-[8px] md:flex md:w-[45%]">
                     <img
                         src={CASHEW}
-                        alt=""
+                        alt="cashew"
                         className="h-full w-full object-cover"
                     />
                 </div>

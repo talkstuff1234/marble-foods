@@ -16,9 +16,9 @@ const AboutTeam = () => {
     return (
         <div className="relative">
             <div className="flex w-full items-center justify-center px-[2%]">
-                <img src={GREEN} alt="" className="w-[31.7%]" />
-                <img src={BLUE} alt="" className="w-[31.7%]" />
-                <img src={DEEP} alt="" className="w-[31.7%]" />
+                <img src={GREEN} alt="green background" className="w-[31.7%]" />
+                <img src={BLUE} alt="blue background" className="w-[31.7%]" />
+                <img src={DEEP} alt="deep background" className="w-[31.7%]" />
             </div>
             <div className="absolute top-[50px] h-[10vh] w-full bg-white/30 backdrop-blur-xl"></div>
             <div className="mb-20 mt-20">
@@ -81,7 +81,7 @@ const AboutTeam = () => {
                                         }}
                                     >
                                         <div className="absolute left-0 top-0 h-full w-full transition-all duration-1000 ease-in-out group-hover:bg-black/30 "></div>
-                                        <div className="absolute md:top-[400px] bottom-10 left-0 flex flex-col gap-4 px-4 transition-all duration-1000 ease-in-out group-hover:top-[180px]">
+                                        <div className="absolute bottom-10 left-0 flex flex-col gap-4 px-4 transition-all duration-1000 ease-in-out group-hover:top-[180px] md:top-[400px]">
                                             <h1 className="text-[28px] font-[400] text-white">
                                                 {member.name}
                                             </h1>
@@ -115,7 +115,7 @@ const AboutTeam = () => {
                         className="h-[490px] w-[400px]"
                         style={{ background: `url('${TEAM1}')` }}
                     ></div> */}
-                    <div className="flex items-center justify-between px-[5%] mt-10">
+                    <div className="mt-10 flex items-center justify-between px-[5%]">
                         <H1 align="center">Team</H1>
                         <div className=" flex items-center justify-center gap-7">
                             <Prev className="swiper-button-prev cursor-pointer" />
