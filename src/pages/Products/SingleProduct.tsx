@@ -24,7 +24,7 @@ const SingleProduct = () => {
 
     useEffect(() => {
         getProductDetails()
-    }, [])
+    }, [productCode])
 
     const getProductDetails = async () => {
         setIsLoading(true)

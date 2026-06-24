@@ -71,7 +71,7 @@ const ContactHome = () => {
                             type={"select"}
                             isRequired={true}
                             title="Product"
-                            option={["Chahew", "Maize", "Cocoa", "Peanut"]}
+                            option={["Cashew", "Maize", "Cocoa", "Peanut"]}
                             placeholder="e.g Peanut"
                             name="product"
                             value={formData.product}

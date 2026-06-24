@@ -3,7 +3,7 @@ import TextFade from "../../components/CustomTexts/TextFade"
 import P from "../../components/CustomTexts/P"
 import Button from "../../components/Buttons/Button"
 import { ArrowRight1 } from "../../assets/RenderedAssets"
-import HEROIMG from "../../assets/heroAbout.png"
+import HEROIMG from "../../assets/heroAbout.jpg"
 import H1 from "../../components/CustomTexts/H1"
 
 const HeroAbout = () => {
@@ -26,7 +26,7 @@ const HeroAbout = () => {
                     agricultural products.
                 </P>
             </TextFade>
-            <img src={HEROIMG} alt="hero image" className=" mt-32 w-full" />
+            <img src={HEROIMG} alt="hero image" className=" mt-32 w-full rounded-[20px] h-[60dvh] object-cover" />
             <TextFade
                 animation="fade-down"
                 style="transition-all duration-1000 ease-in-out mt-5 mb-10"

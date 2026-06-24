@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react"
 import LOGO from "../../assets/logo.png"
-import { NavItems } from "../../lib/constants"
+import { NavItems, routeTimer } from "../../lib/constants"
 import {
     EachNavItemsProps,
     NavItemsProps,
     ProductNavbarItemProp,
 } from "../../lib/types"
 import P from "../CustomTexts/P"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useOutro } from "../../lib/OutroContext"
 import { useRouteContext } from "../../lib/RouteContext"
 import {
@@ -58,7 +58,7 @@ const Navbar = () => {
         callOutro && triggerOutro()
         setTimeout(() => {
             navigate(url)
-        }, 3000)
+        }, Number(routeTimer))
     }
 
     const toggleNavbar = () => {
@@ -111,7 +111,7 @@ const Navbar = () => {
                         <img
                             src={LOGO}
                             alt="logo"
-                            className="w-[90px] md:w-[116px]"
+                            className="w-[90px] md:w-[166px]"
                         />
                         <div className="hidden items-center gap-10 md:flex">
                             {NavItems.items.map(
@@ -163,24 +163,21 @@ const Navbar = () => {
                                                                         index: number,
                                                                     ) => {
                                                                         return (
-                                                                            <div
+                                                                            <Link
                                                                                 className="flex items-center gap-5"
                                                                                 key={
                                                                                     index
                                                                                 }
-                                                                                onClick={() => {
-                                                                                    routeLink(
-                                                                                        `products/${data.productCode}`,
-                                                                                        true,
-                                                                                    )
-                                                                                }}
+                                                                                to={`/products/${data.productCode}`}
                                                                             >
                                                                                 <div className="flex h-[55px] w-[55px] items-center justify-center overflow-hidden rounded-[8px] bg-[#F5F5F5] p-3">
                                                                                     <img
                                                                                         src={
                                                                                             data.productIcon
                                                                                         }
-                                                                                        alt={data.productName}
+                                                                                        alt={
+                                                                                            data.productName
+                                                                                        }
                                                                                         className="h-full w-full object-cover"
                                                                                     />
                                                                                 </div>
@@ -201,7 +198,7 @@ const Navbar = () => {
                                                                                         }
                                                                                     </P>
                                                                                 </div>
-                                                                            </div>
+                                                                            </Link>
                                                                         )
                                                                     },
                                                                 )}

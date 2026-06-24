@@ -5,9 +5,9 @@ import TW from "../../assets/Twitter.svg"
 import IN from "../../assets/Instagram.svg"
 import LI from "../../assets/LinkedIn.svg"
 import YT from "../../assets/YouTube.svg"
-import { FOOTER_LINKS } from "../../lib/constants"
+import { FOOTER_LINKS, routeTimer } from "../../lib/constants"
 import { useOutro } from "../../lib/OutroContext"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useRouteContext } from "../../lib/RouteContext"
 
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
         callOutro && triggerOutro()
         setTimeout(() => {
             navigate(url)
-        }, 3000)
+        }, Number(routeTimer))
     }
     return (
         <div className=" bg-[#F9F9FB] px-[5%] pb-[3dvh] pt-[10dvh]">
@@ -43,21 +43,19 @@ const Footer = () => {
                             <h2 className="text-[16px] font-[600] text-[#7e7e7e]">
                                 {link.title}
                             </h2>
-                            <div className="flex flex-col gap-7 opacity-70">
+                            <div className="flex flex-col gap-7 opacity-70 ">
                                 {link.items.map((item, itemIndex) => (
-                                    <div
-                                        className="group w-fit"
+                                    <Link
+                                        className="group w-fit cursor-pointer"
                                         key={itemIndex}
-                                        onClick={() => {
-                                            routeLink(item.link, true)
-                                        }}
+                                        to={item.link}
                                     >
                                         <p
                                             className={`text-[16px]  font-[400] transition-all duration-1000 ease-in-out group-hover:text-primaryLight ${currentRoute === item.link ? "text-primaryLight" : "text-lightText "} `}
                                         >
                                             {item.text}
                                         </p>
-                                    </div>
+                                    </Link>
                                 ))}
                             </div>
                         </div>

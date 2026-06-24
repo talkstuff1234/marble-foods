@@ -10,6 +10,7 @@ import {
 import { RelatedProductItemProp } from "../../lib/types"
 import { useOutro } from "../../lib/OutroContext"
 import { useNavigate } from "react-router-dom"
+import { routeTimer } from "../../lib/constants"
 
 const RelatedProducts = () => {
     const { triggerOutro } = useOutro()
@@ -41,7 +42,7 @@ const RelatedProducts = () => {
         callOutro && triggerOutro()
         setTimeout(() => {
             navigate(url)
-        }, 3000)
+        }, Number(routeTimer))
     }
     return (
         <div className="w-full bg-[#FBFAF9] px-[5%] py-[10vh]">
@@ -97,7 +98,9 @@ const RelatedProducts = () => {
                                                             src={
                                                                 data.productImageUrl
                                                             }
-                                                            alt={data.productName}
+                                                            alt={
+                                                                data.productName
+                                                            }
                                                             className="h-full w-full object-cover opacity-80 transition-all duration-1000 ease-in-out group-hover:scale-110"
                                                         />
                                                     </div>

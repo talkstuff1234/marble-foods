@@ -17,7 +17,7 @@ const AboutHomepage = () => {
                     style="transition-all duration-1000 ease-in-out"
                 >
                     <H1 align="left" textColor="text-primaryLight">
-                        <span className="italic ">MarbleFoods</span>
+                        <span className="italic ">Marble Foods</span>
                     </H1>
                 </TextFade>{" "}
                 <div className="my-4"></div>

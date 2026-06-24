@@ -1,13 +1,13 @@
 import React from "react"
-import MISSIONIMG from "../../assets/mission.png"
-import VISIONIMG from "../../assets/vision.png"
+import MISSIONIMG from "../../assets/mission.jpg"
+import VISIONIMG from "../../assets/vision.jpg"
 import TextFade from "../../components/CustomTexts/TextFade"
 import H1 from "../../components/CustomTexts/H1"
 import P from "../../components/CustomTexts/P"
 
 const AboutMissionVission = () => {
     return (
-        <div className="px-[5%] py-[10dvh]">
+        <div className="px-[5%] py-[10dvh]" id="mission">
             <div className="mb-10 flex flex-col items-center gap-10  md:mb-0 md:flex-row md:gap-0">
                 <div className="w-full md:w-[55%]">
                     <img src={MISSIONIMG} alt="mission" className="w-full" />

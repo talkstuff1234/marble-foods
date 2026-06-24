@@ -23,7 +23,23 @@ const MainContent: React.FC = () => {
         <>
             <ScrollToTop />
             <Navbar />
-            {isOutro && <PageOutroLoader />}
+            <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/about-us" element={<AboutPage />} />{" "}
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/contact-us" element={<ContactPage />} />
+                <Route
+                    path="/products/:productCode"
+                    element={<SingleProduct />}
+                />
+                <Route
+                    path="/sustainability"
+                    element={<SustainabilityPage />}
+                />
+            </Routes>
+            <Footer />
+            {/* {isOutro && <PageOutroLoader />}
             {routeJustChanged ? (
                 <>
                     {" "}
@@ -48,7 +64,7 @@ const MainContent: React.FC = () => {
                     </Routes>
                     <Footer />
                 </>
-            )}
+            )} */}
             {/* <ScrollToTop />
             <Navbar />
             <Routes>

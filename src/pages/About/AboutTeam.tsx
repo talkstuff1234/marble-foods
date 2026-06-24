@@ -11,11 +11,17 @@ import "swiper/css/pagination"
 import { Navigation, Autoplay } from "swiper/modules"
 import { Next, Prev } from "../../assets/RenderedAssets"
 import { teamMembers } from "../../lib/constants"
+import { Swiper as SwiperType } from "swiper"
 
 const AboutTeam = () => {
+    let swiperRef: SwiperType | null = null
+
     return (
         <div className="relative">
-            <div className="flex w-full items-center justify-center px-[2%]">
+            <div
+                id="team"
+                className="flex w-full items-center justify-center px-[2%]"
+            >
                 <img src={GREEN} alt="green background" className="w-[31.7%]" />
                 <img src={BLUE} alt="blue background" className="w-[31.7%]" />
                 <img src={DEEP} alt="deep background" className="w-[31.7%]" />
@@ -29,7 +35,7 @@ const AboutTeam = () => {
                 >
                     <H1 align="center">Meet our talented team</H1>
                 </TextFade>{" "}
-                <TextFade
+                {/* <TextFade
                     animation="fade-right"
                     style="transition-all duration-1000 ease-in-out"
                 >
@@ -38,7 +44,7 @@ const AboutTeam = () => {
                         and Côte d'Ivoire, famed for their rich and aromatic
                         beans.
                     </P>
-                </TextFade>
+                </TextFade> */}
                 <div className="mt-20 flex flex-col">
                     <div className="flex border">
                         <Swiper
@@ -53,6 +59,10 @@ const AboutTeam = () => {
                             autoplay={{
                                 delay: 2500,
                                 disableOnInteraction: false,
+                                pauseOnMouseEnter: true,
+                            }}
+                            onSwiper={(swiper: SwiperType) => {
+                                swiperRef = swiper
                             }}
                             breakpoints={{
                                 1680: {
@@ -64,7 +74,6 @@ const AboutTeam = () => {
                                 697: {
                                     slidesPerView: 2,
                                 },
-
                                 883: {
                                     slidesPerView: 1,
                                 },
@@ -78,6 +87,7 @@ const AboutTeam = () => {
                                         style={{
                                             background: `url('${member.image}')`,
                                             backgroundSize: "cover",
+                                            backgroundColor: "#0A1F0E",
                                         }}
                                     >
                                         <div className="absolute left-0 top-0 h-full w-full transition-all duration-1000 ease-in-out group-hover:bg-black/30 "></div>
@@ -86,8 +96,13 @@ const AboutTeam = () => {
                                                 {member.name}
                                             </h1>
                                             <P mode={"dark"}>{member.title}</P>
-                                            <P mode={"dark"}>{member.bio}</P>
-                                            <div className="flex items-center gap-4">
+                                            <P mode={"dark"}>
+                                                {" "}
+                                                <span className="line-clamp-[8] text-ellipsis">
+                                                    {member.bio}
+                                                </span>{" "}
+                                            </P>
+                                            {/* <div className="flex items-center gap-4">
                                                 {member.socialMedia.map(
                                                     (social, socialIndex) => (
                                                         <a
@@ -103,7 +118,7 @@ const AboutTeam = () => {
                                                         </a>
                                                     ),
                                                 )}
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </SwiperSlide>
