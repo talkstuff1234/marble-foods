@@ -1,5 +1,20 @@
-declare module "aos"
-declare module "react-slick"
-declare module "swiper/modules"
-declare module "swiper/react"
-declare module "react-tooltip"
+declare module "*.png" {
+    const src: string
+    export default src
+}
+declare module "*.jpg" {
+    const src: string
+    export default src
+}
+declare module "*.jpeg" {
+    const src: string
+    export default src
+}
+declare module "*.gif" {
+    const src: string
+    export default src
+}
+declare module "*.webp" {
+    const src: string
+    export default src
+}
