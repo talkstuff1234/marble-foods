@@ -3,22 +3,25 @@
 @tailwind utilities;
 
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #fbfaf7;
+}
+
+body {
     font-family: "Outfit", sans-serif;
+    min-height: 100vh;
 }
 
 span {
-    font-family: "DM Sans", sans-serif !important;
+    font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
 }
 
-.border-gradient {
-    border: linear-gradient(
-        90deg,
-        rgba(241, 241, 241, 0.05),
-        rgba(32, 101, 46, 0.05)
-    );
-    border-image-slice: 1;
+a {
+    text-decoration: none;
 }
